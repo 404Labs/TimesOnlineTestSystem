@@ -54,7 +54,7 @@
 
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-chevron-down"></i></span>
-                                    <asp:DropDownList ID="ddlProgram" class="form-control" runat="server">
+                                    <asp:DropDownList ID="ddlUserType" class="form-control" runat="server">
                                         <asp:ListItem Text="Student" Value="1"></asp:ListItem>
                                         <asp:ListItem Text="Faculty" Value="2"></asp:ListItem>
                                     </asp:DropDownList>
@@ -65,10 +65,12 @@
                                         Remember Me 
                                     </label>
                                 </div>
-                                <div class="alert alert-danger" role="alert" runat="server" id="divError">
-                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                    <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
-                                </div>
+                                <asp:Panel ID="Pnl1" Visible="false" runat="server">
+                                    <div class="alert alert-danger" role="alert" runat="server" id="divError">
+                                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                        <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </asp:Panel>
                                 <div>
                                 </div>
                                 <asp:Button ID="btnLogin" runat="server" Text="Login" class="btn btn-lg btn-success btn-block" OnClick="btnLogin_Click" />

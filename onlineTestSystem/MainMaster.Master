@@ -33,7 +33,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" class="form-horizontal" runat="server">
+    <form id="form1" runat="server">
         <!-- 
 		#####################################################################################################################################
 		#												NAVIGATION  starts																	#

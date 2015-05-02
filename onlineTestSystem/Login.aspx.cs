@@ -18,13 +18,41 @@ namespace onlineTestSystem
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             DAL dal = new DAL();
-            string query = "select UserName, Password from Login where Username = '" + txtUsername.Text + "' AND Password = '" + txtPassword.Text + "'";
-
-            DataTable dt = dal.selectData(query);
-            if (dt.Rows.Count > 0)
+            if (ddlUserType.SelectedValue == "2")
             {
-                Response.Redirect("GenerateTest.aspx");
+                string query = "select * from Teacher where UserName = '" + txtUsername.Text + "' AND Password = '" + txtPassword.Text + "'";
+
+                DataTable dt = dal.selectData(query);
+                if (dt.Rows.Count > 0)
+                {
+                    Session["userType"] = "Teacher";
+                    Session["TeacherID"] = dt.Rows[0][0];
+                    Response.Redirect("GenerateTest.aspx");
+                }
+                else
+                {
+                    Pnl1.Visible = true;
+                    lblError.Text = "Incorrect User name or Password";
+                    txtUsername.Focus();
+                }
             }
+            if (ddlUserType.SelectedValue == "1")
+            {
+                //string query = "select * from Teacher where UserName = '" + txtUsername.Text + "' AND Password = '" + txtPassword.Text + "'";
+
+                //DataTable dt = dal.selectData(query);
+                //if (dt.Rows.Count > 0)
+                //{
+                //    Response.Redirect("GenerateTest.aspx");
+                //}
+                //else
+                //{
+                //    Pnl1.Visible = true;
+                //    lblError.Text = "Incorrect User name or Password";
+                //    txtUsername.Focus();
+                //}
+            }
+
         }
     }
 }

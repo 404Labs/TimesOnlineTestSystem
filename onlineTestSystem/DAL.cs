@@ -4,12 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 namespace onlineTestSystem
 {
     public  class DAL
     {
-        string connectionString = "Data Source=RABIPC\\SQLEXPRESS;Initial Catalog=TimesDb;Integrated Security=True";
+        string connectionString = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
         DataTable dt;
         SqlConnection connection;
         SqlCommand command;

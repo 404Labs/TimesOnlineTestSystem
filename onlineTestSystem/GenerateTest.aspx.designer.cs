@@ -22,6 +22,15 @@ namespace onlineTestSystem {
         protected global::System.Web.UI.WebControls.TextBox txtName;
         
         /// <summary>
+        /// ddlClass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlClass;
+        
+        /// <summary>
         /// ddlSubject control.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,13 @@ namespace onlineTestSystem {
         protected global::System.Web.UI.WebControls.DropDownList ddlSubject;
         
         /// <summary>
-        /// ddlClass control.
+        /// ddlChapter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlClass;
+        protected global::System.Web.UI.WebControls.DropDownList ddlChapter;
         
         /// <summary>
         /// txtDuration control.
@@ -56,5 +65,32 @@ namespace onlineTestSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNumOfQuestions;
+        
+        /// <summary>
+        /// lblConfirm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblConfirm;
+        
+        /// <summary>
+        /// btnGenerateTest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGenerateTest;
+        
+        /// <summary>
+        /// btnAddQuestion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddQuestion;
     }
 }
