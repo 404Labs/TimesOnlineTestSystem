@@ -44,6 +44,7 @@ namespace onlineTestSystem
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            string str = (Panel1.FindControl("txt1") as TextBox).Text;
 
         }
 

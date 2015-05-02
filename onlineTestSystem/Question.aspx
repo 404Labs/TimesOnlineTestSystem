@@ -69,24 +69,27 @@
         </div>
     </div>
 
-    
-        <div class="form-group">
-           <label class="col-sm-2 control-label">Number of Options</label>
-            <div class="col-sm-10">
-                <asp:DropDownList CssClass="form-control" ID="ddlNumOFOpt" runat="server" Style="width: 25%" OnSelectedIndexChanged="ddlNumOFOpt_SelectedIndexChanged" AutoPostBack="true">
-                    <asp:ListItem>Select Number</asp:ListItem>
-                    <asp:ListItem Text="1" Value="1"></asp:ListItem>
-                    <asp:ListItem Text="2" Value="2"></asp:ListItem>
-                    <asp:ListItem Text="3" Value="3"></asp:ListItem>
-                    <asp:ListItem Text="4" Value="4"></asp:ListItem>
-                    <asp:ListItem Text="5" Value="5"></asp:ListItem>
-                   
-                </asp:DropDownList>
-            </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Number of Options</label>
+        <div class="col-sm-10">
+            <asp:DropDownList CssClass="form-control" ID="ddlNumOFOpt" runat="server" Style="width: 25%" OnSelectedIndexChanged="ddlNumOFOpt_SelectedIndexChanged" AutoPostBack="true">
+                <asp:ListItem>Select Number</asp:ListItem>
+                <asp:ListItem Text="1" Value="1"></asp:ListItem>
+                <asp:ListItem Text="2" Value="2"></asp:ListItem>
+                <asp:ListItem Text="3" Value="3"></asp:ListItem>
+                <asp:ListItem Text="4" Value="4"></asp:ListItem>
+                <asp:ListItem Text="5" Value="5"></asp:ListItem>
+
+            </asp:DropDownList>
         </div>
+    </div>
     <asp:Panel ID="Panel1" runat="server"></asp:Panel>
     <div class="form-group">
-        <asp:Button CssClass="btn btn-warning" ID="btnSave" Text="Save" runat="server" OnClick="btnSave_Click" />
+        <div class="col-sm-offset-3 col-sm-10">
+
+            <asp:Button class="btn btn-primary btn-lg btn-block" ID="btnSave" Text="Save" runat="server" Style="margin-top: 10px;margin-bottom:10px; width: 25%" OnClick="btnSave_Click" />
+        </div>
     </div>
 
 </asp:Content>
