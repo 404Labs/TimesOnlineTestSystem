@@ -26,7 +26,7 @@ namespace onlineTestSystem
                 if (dt.Rows.Count > 0)
                 {
                     Session["userType"] = "Teacher";
-                    Session["TeacherID"] = dt.Rows[0][0];
+                    Session["TeacherID"] = dt.Rows[0]["TeacherID"];
                     Response.Redirect("GenerateTest.aspx");
                 }
                 else
@@ -38,19 +38,23 @@ namespace onlineTestSystem
             }
             if (ddlUserType.SelectedValue == "1")
             {
-                //string query = "select * from Teacher where UserName = '" + txtUsername.Text + "' AND Password = '" + txtPassword.Text + "'";
+                string query = "select * from student where UserName = '" + txtUsername.Text + "' AND Password = '" + txtPassword.Text + "'";
 
-                //DataTable dt = dal.selectData(query);
-                //if (dt.Rows.Count > 0)
-                //{
-                //    Response.Redirect("GenerateTest.aspx");
-                //}
-                //else
-                //{
-                //    Pnl1.Visible = true;
-                //    lblError.Text = "Incorrect User name or Password";
-                //    txtUsername.Focus();
-                //}
+                DataTable dt = dal.selectData(query);
+                if (dt.Rows.Count > 0)
+                {
+                    Session["userType"] = "Student";
+                    Session["StudentID"] = dt.Rows[0]["StudentID"];
+                    Session["NumberOfQuestions"] = 5;
+                    Response.Redirect("Test.aspx");
+                }
+                else
+                {
+                    Pnl1.Visible = true;
+                    lblError.Text = "Incorrect User name or Password";
+                    txtUsername.Focus();
+                }
+                
             }
 
         }

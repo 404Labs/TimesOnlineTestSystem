@@ -50,5 +50,14 @@ namespace onlineTestSystem
             int affectedRows = command.ExecuteNonQuery();
             return affectedRows;
         }
+        public int insertDataWithReturnId(string query)
+        {
+            connection = new SqlConnection(connectionString);
+            connection.Open();
+            command = new SqlCommand(query, connection);
+           // command.ExecuteNonQuery();
+            int returnRowNumber = Convert.ToInt32(command.ExecuteScalar());
+            return returnRowNumber;
+        }
     }
 }

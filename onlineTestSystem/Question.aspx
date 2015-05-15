@@ -18,28 +18,29 @@
     <div class="form-inline">
         <div class="form-group">
             <label>Class</label>
-            <asp:DropDownList CssClass="form-control" ID="ddlClass" runat="server">
-                <asp:ListItem>Select Class</asp:ListItem>
-                <asp:ListItem Text="GMAT" Value="1"></asp:ListItem>
+            <asp:DropDownList CssClass="form-control" ID="ddlClass" runat="server" Style="min-width:250px" OnSelectedIndexChanged="ddlClass_SelectedIndexChanged" AutoPostBack="true">
+              
+                <%--<asp:ListItem Text="GMAT" Value="1"></asp:ListItem>
                 <asp:ListItem Text="IELTS" Value="2"></asp:ListItem>
                 <asp:ListItem Text="MCAT" Value="3"></asp:ListItem>
                 <asp:ListItem Text="ECAT" Value="4"></asp:ListItem>
                 <asp:ListItem Text="BCAT" Value="5"></asp:ListItem>
-                <asp:ListItem Text="SAT" Value="6"></asp:ListItem>
+                <asp:ListItem Text="SAT" Value="6"></asp:ListItem>--%>
             </asp:DropDownList>
 
         </div>
         <div class="form-group">
             <label>Subject</label>
 
-            <asp:DropDownList CssClass="form-control" ID="ddlSubject" runat="server">
-                <asp:ListItem>Select Subject</asp:ListItem>
+            <asp:DropDownList CssClass="form-control" ID="ddlSubject" runat="server" Style="min-width:250px" OnSelectedIndexChanged="ddlSubject_SelectedIndexChanged" AutoPostBack="true">
+                
+                <%--<asp:ListItem>Select Subject</asp:ListItem>
                 <asp:ListItem Text="Mathematics" Value="1"></asp:ListItem>
                 <asp:ListItem Text="Physics" Value="2"></asp:ListItem>
                 <asp:ListItem Text="Chemistry" Value="3"></asp:ListItem>
                 <asp:ListItem Text="English" Value="4"></asp:ListItem>
                 <asp:ListItem Text="Biology" Value="5"></asp:ListItem>
-                <asp:ListItem Text="General Knowledge" Value="6"></asp:ListItem>
+                <asp:ListItem Text="General Knowledge" Value="6"></asp:ListItem>--%>
             </asp:DropDownList>
 
         </div>
@@ -47,13 +48,13 @@
 
             <label>Chapter</label>
 
-            <asp:DropDownList ID="ddlChapter" CssClass="form-control" runat="server">
+            <asp:DropDownList ID="ddlChapter" CssClass="form-control" Style="min-width:250px" runat="server">
                 <asp:ListItem>Select Chapter</asp:ListItem>
-                <asp:ListItem Text="Chapter 1" Value="1"></asp:ListItem>
+                <%--<asp:ListItem Text="Chapter 1" Value="1"></asp:ListItem>
                 <asp:ListItem Text="Chapter 2" Value="2"></asp:ListItem>
                 <asp:ListItem Text="Chapter 3" Value="3"></asp:ListItem>
                 <asp:ListItem Text="Chapter 4" Value="4"></asp:ListItem>
-                <asp:ListItem Text="Chapter 5" Value="5"></asp:ListItem>
+                <asp:ListItem Text="Chapter 5" Value="5"></asp:ListItem>--%>
             </asp:DropDownList>
 
         </div>
@@ -84,7 +85,24 @@
             </asp:DropDownList>
         </div>
     </div>
-    <asp:Panel ID="Panel1" runat="server"></asp:Panel>
+    <asp:Panel ID="Panel1" class="form-group" runat="server"></asp:Panel>
+      
+    <div style="margin-top:60px"></div>
+     <div class="form-group">
+        <label class="col-sm-2 control-label">Number of Options</label>
+        <div class="col-sm-10">
+            <asp:DropDownList CssClass="form-control" ID="ddlCorrectAnswer" runat="server" Style="width: 25%" >
+                <asp:ListItem>Select Correct Answer</asp:ListItem>
+                <asp:ListItem Text="a" Value="a"></asp:ListItem>
+                <asp:ListItem Text="b" Value="b"></asp:ListItem>
+                <asp:ListItem Text="c" Value="c"></asp:ListItem>
+                <asp:ListItem Text="d" Value="d"></asp:ListItem>
+                <asp:ListItem Text="e" Value="e"></asp:ListItem>
+
+            </asp:DropDownList>
+        </div>
+    </div>
+    
     <div class="form-group">
         <div class="col-sm-offset-3 col-sm-10">
 

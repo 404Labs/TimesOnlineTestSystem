@@ -105,7 +105,9 @@
     <Content Include="Login.aspx" />
     <Content Include="Question.aspx" />
     <Content Include="Student.aspx" />
+    <Content Include="Test.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Result.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL.cs" />
@@ -144,6 +146,20 @@
     </Compile>
     <Compile Include="Student.aspx.designer.cs">
       <DependentUpon>Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Result.aspx.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Result.aspx.designer.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
